@@ -1,4 +1,3 @@
-```python
 """
 Resume parsing and validation.
 

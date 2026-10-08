@@ -80,8 +80,6 @@ Instead of treating every job seeker the same way, the application starts with t
 
 ## Project Architecture
 
-The application is organized into several components:
-
 ```text
 nyc-job-intelligence/
 │
@@ -240,6 +238,21 @@ Used to extract text from uploaded PDF resumes.
 ### python-docx
 
 Used to extract text from uploaded DOCX resumes.
+
+### Ollama
+
+Earlier versions of the project used Ollama for local LLM-powered job analysis and resume generation.
+
+The Ollama setup used in the earlier version was:
+
+```text
+Ollama
+Model: Llama 3.2:1b
+```
+
+The important distinction is that **Ollama is the local LLM runtime, while Llama 3.2:1b is the model running through Ollama**.
+
+The current upgraded NYC Jobs code is primarily rule-based and does not currently make an Ollama call. Ollama remains part of the project's development history and may be incorporated into future versions where an LLM provides a useful advantage.
 
 ---
 
@@ -474,7 +487,7 @@ The resume-generation component is designed so that it can eventually be replace
 
 The project has evolved through several versions.
 
-Earlier versions experimented more heavily with LLM-based job analysis using Ollama and local language models.
+Earlier versions experimented more heavily with LLM-based job analysis using Ollama and the Llama 3.2:1b model.
 
 The current upgraded NYC Jobs version focuses more heavily on deterministic, rule-based processing.
 
@@ -707,6 +720,8 @@ Store Results
 Generate Resume
 ```
 
+The earlier version also experimented with local LLM processing through Ollama and Llama 3.2:1b.
+
 ### Current Version — NYC Job Intelligence
 
 The upgraded version adds:
@@ -753,3 +768,4 @@ Built as an ongoing Python, web-scraping, automation, and AI/LLM learning projec
 
 The project is intentionally being developed iteratively: build something useful, test it, identify where it breaks, change the approach, and improve it.
 
+One thing I **wouldn't** put in the README is a claim like “Ollama v0.x.x” unless you know the exact installed Ollama version. **Llama 3.2:1b is the model version, not the Ollama version.** If you run `ollama --version`, send me the result and I can add the exact version cleanly.

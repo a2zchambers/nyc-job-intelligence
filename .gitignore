@@ -1,1 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
 
+# Virtual environments
+venv/
+.venv/
+env/
+.env
+
+# Environment variables / secrets
+.env
+*.env
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Local data
+data/output/
+data/processed/
+data/raw/
+
+# Uploaded resumes
+uploads/
+resumes_uploaded/
+
+# Generated resumes / documents
+generated_resumes/
+output/
+*.docx
+*.pdf
+
+# Selenium / browser files
+selenium_cache/
+chromedriver.log
+
+# Logs
+*.log
+
+# Streamlit
+.streamlit/secrets.toml
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# IDEs
+.vscode/
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Temporary files
+*.tmp
+*.temp

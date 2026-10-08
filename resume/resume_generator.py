@@ -1,4 +1,3 @@
-```python
 """
 Resume generation logic.
 
